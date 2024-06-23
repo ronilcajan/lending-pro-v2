@@ -1,0 +1,62 @@
+#loading-container {
+	position: absolute;
+	display: flex;
+	height: 100%;
+	width: 100%;
+	background-color: white;
+	z-index: 9999;
+}
+#loading-screen {
+	position: absolute;
+	left: 48%;
+	top: 48%;
+	z-index: 9999;
+	text-align: center;
+}
+.field-icon {
+	float: right;
+	margin-left: -25px;
+	margin-top: -27px;
+	margin-right: 5px;
+	position: relative;
+	z-index: 2;
+	cursor: pointer;
+}
+
+.input_print {
+	border: 0;
+	border-bottom: 1px solid black;
+	outline: none;
+}
+
+@media screen {
+	@page {
+		size: A4; /* DIN A4 standard, Europe */
+		margin: 0;
+	}
+}
+
+@media print {
+	@page {
+		size: A4; /* DIN A4 standard, Europe */
+		margin: 5mm;
+	}
+	html,
+	body {
+		margin: 0px;
+		height: auto;
+		background: #fff;
+		overflow: visible;
+	}
+	p {
+		font-size: 16px;
+	}
+
+	#printThis {
+		height: auto;
+	}
+}
+#ledger tr td,
+tr th {
+	padding: 10px;
+}
